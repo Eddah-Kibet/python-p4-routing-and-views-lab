@@ -25,14 +25,19 @@ def math_operation(num1, operation, num2):
     num1, num2 = int(num1), int(num2)
     if operation == '+':
         return str(num1 + num2)
+    
     elif operation == '-':
         return str(num1 - num2)
+    
     elif operation == '*':
         return str(num1 * num2)
-    elif operation == '/':
+    
+    elif operation == "div":
+        if num2 == 0:
+            return "Division by zero not allowed"
         return str(num1 / num2)
+    
     elif operation == '%':
         return str(num1 % num2)
-    else:
-        return 'Invalid operation'
+    
     
